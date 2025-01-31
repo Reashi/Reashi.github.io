@@ -1,0 +1,64 @@
+{
+    "categories": [
+        {
+            "id": "programmingLanguages",
+            "title": "Programlama Dilleri",
+            "skills": [
+                "C",
+                "C++",
+                "C#",
+                "Python",
+                "JavaScript",
+                "HTML/CSS"
+            ]
+        },
+        {
+            "id": "webDevelopment",
+            "title": "Web Geliştirme ve CMS",
+            "skills": [
+                "WordPress",
+                "MySQL",
+                "Frontend",
+                "Backend",
+                "Responsive Tasarım"
+            ]
+        },
+        {
+            "id": "gameDev",
+            "title": "Oyun Geliştirme",
+            "skills": [
+                "Unity (C#)",
+                "Unity ile Oyun Geliştirme"
+            ]
+        },
+        {
+            "id": "cloudDevOps",
+            "title": "Bulut ve DevOps",
+            "skills": [
+                "AWS",
+                "Docker",
+                "Git",
+                "GitHub",
+                "Agile/Scrum"
+            ]
+        },
+        {
+            "id": "embedded",
+            "title": "Donanım ve Gömülü Sistemler",
+            "skills": [
+                "Arduino",
+                "Arduino Programlama"
+            ]
+        },
+        {
+            "id": "softwareEng",
+            "title": "Yazılım Mühendisliği",
+            "skills": [
+                "Algoritmalar ve Veri Yapıları",
+                "SDLC",
+                "UML Modelleme",
+                "Veri Analizi"
+            ]
+        }
+    ]
+} 

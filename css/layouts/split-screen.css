@@ -1,0 +1,314 @@
+.split-screen {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 80px); /* Navbar yüksekliğini çıkarıyoruz */
+}
+
+.dev-side, .youtube-side {
+    flex: 1;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.dev-side {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+.youtube-side {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.section-title {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section-button {
+    color: var(--text-color);
+}
+
+.section-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.section-button:active {
+    transform: translateX(-50%) scale(0.98);
+}
+
+.section-button h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.youtube-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 1rem;
+}
+
+.youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shorts-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.shorts-video {
+    flex: 0 0 auto;
+    width: 280px; /* Sabit genişlik */
+    height: 500px; /* Sabit yükseklik */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.shorts-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.regular-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.regular-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Kartlar arası boşluk için */
+.card {
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: none !important;
+    backdrop-filter: blur(5px);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Kart başlıkları için stil */
+.card h4, .skill-category-title button {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* Kart başlıkları altındaki çizgi */
+.card h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+/* Skill kategori başlıkları için stil */
+.skill-category-title button {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: none;
+    border-radius: 10px;
+    color: var(--text-color) !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Kategori başlıkları için hover efekti */
+.skill-category-title button:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .split-screen {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .dev-side, .youtube-side {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .section-button:hover {
+        transform: translateX(-50%) scale(1.03);
+    }
+
+    .shorts-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .shorts-video {
+        width: 250px; /* Mobilde biraz daha küçük */
+        height: 445px; /* 16:9 oranını koruyarak */
+    }
+
+    .card h4, .skill-category-title button {
+        font-size: 1.5rem;
+    }
+}
+
+/* Proje listesi stilleri */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.project-item h5 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.project-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Video editing deneyimi stilleri */
+.experience-content {
+    color: var(--text-color);
+}
+
+.experience-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.experience-content h5 {
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.experience-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-content li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.experience-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--text-color);
+}
+
+.experience-content strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.project-details {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.project-details li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.6);
+} 

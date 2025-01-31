@@ -1,0 +1,92 @@
+.navbar-custom {
+    background-color: var(--background-color) !important;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-color) !important;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: var(--text-color) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem !important;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    border-color: var(--text-color);
+    transform: scale(1.05);
+}
+
+.nav-item.active .nav-link {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-color);
+}
+
+.navbar-toggler {
+    border-color: var(--text-color);
+    padding: 0.25rem 0.5rem;
+    display: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem !important;
+    }
+} 
